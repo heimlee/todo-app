@@ -75,6 +75,11 @@ h3 {
   }
 }
 
+.completed-active {
+  border: 1px dotted #000;
+  border-radius: 5px;
+}
+
 .ui-icon {
   transform: scale(1.2);
 }

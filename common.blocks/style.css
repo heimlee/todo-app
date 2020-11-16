@@ -78,6 +78,11 @@ h3 {
   background-image: url(../../library.blocks/images/ui-icons_ffffff_256x240.png);
 }
 
+.completed-active {
+  border: 1px dotted #000;
+  border-radius: 5px;
+}
+
 .ui-icon {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
