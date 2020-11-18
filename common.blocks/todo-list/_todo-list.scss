@@ -65,7 +65,7 @@ h3 {
   }
 }
 
-.completed .task {
+.complete .task {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-decoration: line-through;
@@ -75,8 +75,14 @@ h3 {
   }
 }
 
-.completed-active {
-  border: 1px dotted #000;
+.complete,
+.incomplete {
+  min-height: 200px;
+  margin-top: 30px;
+}
+
+.complete-active {
+  background: #538cb4;
   border-radius: 5px;
 }
 

@@ -68,18 +68,24 @@ h3 {
   cursor: pointer;
 }
 
-.completed .task {
+.complete .task {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-decoration: line-through;
 }
 
-.completed .task .ui-icon {
+.complete .task .ui-icon {
   background-image: url(../../library.blocks/images/ui-icons_ffffff_256x240.png);
 }
 
-.completed-active {
-  border: 1px dotted #000;
+.complete,
+.incomplete {
+  min-height: 200px;
+  margin-top: 30px;
+}
+
+.complete-active {
+  background: #538cb4;
   border-radius: 5px;
 }
 

@@ -1,64 +1,60 @@
-$(function(){
-  $(".add-task > button").click(function() {
-    $(this).click(function() {
-      if($(".input-text").val() != "") {
-        
-        var $task = $("<div class='task'></div>").text($(".input-text").val());
+$(function() {
 
-        var $del = $("<span class='ui-icon ui-icon-trash'></span>").click(function() {
-          var $p = $(this).parent();
-          $p.fadeOut(function() {
-            $p.remove();
-          });
-        });
+  var incomplete = $(".incomplete");
+  var complete = $(".complete");
 
-        var $check = $("<span class='ui-icon ui-icon-check'></span>").click(function() {
-          var $p = $(this).parent();
-          $p.fadeOut(function() {
-            $(".completed").append($p);
-            $p.fadeIn();
-          });
-          $(this).remove();
-        });
+  var addBtn = $(".add-task > button");
+  var delBtn = $(".delete-btn");
 
-        $task.append($del, $check);
+  addBtn.on("click", function() {
 
-        $(".incompleted").append($task);
+    var input = $(".input-text");
+    var task = $("<div class='task'></div>").text(input.val());
 
-        $(".input-text").val("");
+    var del = $("<span class='ui-icon ui-icon-trash'></span>").on("click", function() {
+      var p = $(this).parent();
+      p.remove();
+    });
 
-        // Drag & Drop
+    var check = $("<span class='ui-icon ui-icon-check'></span>").on("click", function() {
+      var p = $(this).parent();
+      complete.append(p);
+      (this).remove();
+    });
 
-        function droppableTask() {
-          $task.fadeOut(function() {
-            $task.find($check).remove();
-            $(".completed").append($task);
-            $task.fadeIn();
-          });
-        };
+    if(input.val() != "") {
+      task.append(del, check);
+      incomplete.append(task);
+      input.val("");
+    }
 
-        $task.draggable({
-          revert: true,
-          revertDuration: 100,
-          containment: "document"
-        });
+    // Drag & Drop
 
-        $(".completed").droppable({
-          accept: $task,
-          activeClass: "completed-active",
-          drop: function(event, ui) {
-            droppableTask(ui.draggable);
-          }
-        });
+    incomplete.sortable({
+      connectWith: ".sortable"
+    }).disableSelection();
 
-        // Delete button
+    complete.sortable({
+      connectWith: ".sortable"
+    }).disableSelection();
 
-        var $delBtn = $(".delete-btn").click(function(){
-          $task.fadeOut(function() {
-            $task.remove();
-          })
-        });
+    incomplete.draggable({
+      containment: "document",
+      revert: true
+    });
+
+    complete.droppable({
+      accept: ".task",
+      activeClass : "complete-active",
+      drop: function(event, ui){
+        ui.draggable.find($(".ui-icon-check")).remove();
       }
+    });
+
+    // Delete All Tasks
+
+    delBtn.on("click", function() {
+      task.remove();
     });
   });
 });
