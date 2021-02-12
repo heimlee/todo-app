@@ -1,0 +1,108 @@
+.todo-wrapper {
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+.add-task {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    width: 100%;
+  }
+
+  button {
+    margin-left: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #666;
+    }
+  }
+}
+
+.input-text {
+  width: 85%;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+h3 {
+  margin: 30px 0;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  text-transform: uppercase;
+}
+
+.task {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 18px;
+  margin: 6px 0;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+
+  span {
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
+.complete .task {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-decoration: line-through;
+
+  .ui-icon {
+    background-image: url(../../library.blocks/images/ui-icons_ffffff_256x240.png);
+  }
+}
+
+.complete,
+.incomplete {
+  min-height: 200px;
+  margin-top: 30px;
+}
+
+.complete-active {
+  background: #538cb4;
+  border-radius: 5px;
+}
+
+.ui-icon {
+  transform: scale(1.2);
+}
+
+.delete-btn {
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: #666;
+  }
+}
