@@ -1,0 +1,68 @@
+.todo-item {
+  align-items: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 5px;
+  width: 400px;
+  user-select: none;
+
+  &:hover {
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 1px rgba(192, 192, 192, 0.66);
+    transition: all .3s ease;
+  }
+}
+
+.text {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.completed {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.delete-task {
+  color: rgba(255, 0, 0, 0.15);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+  transition: all .3s ease;
+  user-select: none;
+  
+  &:hover {
+    color: rgba(235, 43, 43, 0.9);
+  }
+}
+
+.mark {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.circle {
+  border: 1px solid black;
+}
+
+.check-circle {
+  border: 1px solid #777777;
+
+  &::after {
+    border-bottom: 2px solid #59b300;
+    border-right: 2px solid #59b300;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    margin-left: -4px;
+    margin-top: -9px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 6px;
+  }
+}
