@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     flexDirection: 'row',
     margin: '50px 30px 30px',
     width: '80%',
-    
+
     '& .MuiOutlinedInput-root': {
       color: '#3f51b5',
       
@@ -78,7 +78,6 @@ export const TodoInput = () => {
       >
         Add Task
       </Button>
-      {/* <span>{matches ? `(min-width:1200px)` : 'dfs'}</span> */}
     </FormControl>
   );
 };
