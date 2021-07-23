@@ -13,7 +13,7 @@ export const TodoList = () => {
   };
 
   return(
-    <section>
+    <section className="todo-list">
       {renderTodos()}
     </section>
   );
