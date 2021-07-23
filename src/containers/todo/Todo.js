@@ -7,7 +7,7 @@ import './todo.scss';
 
 export const Todo = () => {
   return(
-    <div>
+    <div className="todo-wrapper">
       <TodoInput />
       <TodoList />
     </div>

@@ -11,11 +11,12 @@ import { addTask } from '../../actions/todoActions';
 const useStyles = makeStyles({
   root: {
     flexDirection: 'row',
-    justifyContent: 'center',
     margin: '50px 30px 30px',
+    width: '80%',
+    
     '& .MuiOutlinedInput-root': {
       color: '#3f51b5',
-
+      
       '& fieldset': {
         border: '2px solid #666'
       },
@@ -29,13 +30,13 @@ const useStyles = makeStyles({
   },
   input: {
     borderRadius: 6,
-    width: 500,
+    width: '80%',
   },
   button: {
     border: 0,
     borderRadius: 6,
     marginLeft: 10,
-    width: 200,
+    width: '20%',
   },
 });
 
@@ -77,6 +78,7 @@ export const TodoInput = () => {
       >
         Add Task
       </Button>
+      {/* <span>{matches ? `(min-width:1200px)` : 'dfs'}</span> */}
     </FormControl>
   );
 };
