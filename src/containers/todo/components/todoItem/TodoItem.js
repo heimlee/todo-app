@@ -19,7 +19,7 @@ export const TodoItem = ({ todo }) => {
       >
         {!todo.isCompleted ? 
           <RadioButtonUncheckedIcon style={{ fontSize: 30 }} /> :
-          <CheckCircleIcon style={{ fontSize: 30 }}/>
+          <CheckCircleIcon style={{ fontSize: 30, color: '#3f51b5' }}/>
         }
       </span>
       <span
