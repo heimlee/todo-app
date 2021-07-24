@@ -12,8 +12,8 @@ import { addTask } from '../../actions/todoActions';
 const useStyles = makeStyles({
   root: {
     flexDirection: 'row',
-    margin: '50px 30px 30px',
-    width: '80%',
+    margin: '50px 0 30px',
+    width: '90%',
 
     '& .MuiOutlinedInput-root': {
       color: '#3f51b5',
