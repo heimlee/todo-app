@@ -1,0 +1,19 @@
+.todo-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px 50px;
+}
+
+.todo-title {
+  background-color: #e8f0fe;
+  width: 100%;
+  margin: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #424242;
+}

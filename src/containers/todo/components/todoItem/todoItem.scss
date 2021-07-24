@@ -1,0 +1,50 @@
+.todo-item {
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 1px rgba(192, 192, 192, 0.66);
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 5px 0;
+  overflow-wrap: break-word;
+  padding: 5px;
+  user-select: none;
+  width: 500px;
+  color: #5f6368;
+
+  &:hover {
+    border: 1px solid #dfdfdf;
+    box-shadow: 1px 1px 4px 2px rgba(192, 192, 192, 0.66);
+    transition: all .3s ease;
+  }
+}
+
+.circle {
+  color: #5f6368;
+  height: 30px;
+
+  &:hover {
+    color: #3f51b5;
+  }
+}
+
+.text {
+  padding: 0 10px;
+  width: 84%;
+}
+
+.completed {
+  color: #cccccc;
+}
+
+.delete-task {
+  height: 30px;
+  color: rgba(255, 0, 0, 0.15);
+  transition: all .3s ease;
+  
+  &:hover {
+    color: rgba(235, 43, 43, 0.9);
+  }
+}
