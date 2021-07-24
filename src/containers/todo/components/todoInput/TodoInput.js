@@ -16,10 +16,10 @@ const useStyles = makeStyles({
     width: '90%',
 
     '& .MuiOutlinedInput-root': {
-      color: '#3f51b5',
+      color: '#424242',
       
       '& fieldset': {
-        border: '2px solid #666'
+        border: '2px solid #5f6368'
       },
       '&:hover fieldset': {
         borderColor: '#3f51b5'

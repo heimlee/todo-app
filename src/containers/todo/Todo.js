@@ -7,9 +7,12 @@ import './todo.scss';
 
 export const Todo = () => {
   return(
-    <div className="todo-wrapper">
-      <TodoInput />
-      <TodoList />
-    </div>
+    <>
+      <h1 className="todo-title">Todo App</h1>
+      <div className="todo-wrapper">
+        <TodoInput />
+        <TodoList />
+      </div>
+    </>
   );
 };
