@@ -5,7 +5,7 @@ import { TodoList } from './components/todoList/TodoList';
 
 import './todo.scss';
 
-export const Todo = () => {
+export const Todo:React.FC = () => {
   return(
     <>
       <h1 className="todo-title">Todo App</h1>

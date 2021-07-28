@@ -42,14 +42,15 @@ const useStyles = makeStyles({
 });
 
 export const TodoInput = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState<string>('');
   const dispatch = useDispatch();
-  const onTextChange = (e) => setText(e.target.value);
+  const onTextChange = (e: React.SyntheticEvent<HTMLInputElement | HTMLTextAreaElement>) => setText(e.currentTarget.value);
   const classes = useStyles();
 
-  const onSaveTaskClicked = () => {
+  const onSaveTaskClicked = (e: React.FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     if (text) {
-      dispatch(addTask(uuidv4(), text, false ));
+      dispatch(addTask(Number(uuidv4()), text, false ));
       setText('');
     }
   };
