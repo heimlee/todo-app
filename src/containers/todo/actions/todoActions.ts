@@ -5,7 +5,7 @@ export const COMPLETED_TASK = 'COMPLETED_TASK';
 export const REMOVE_TASK = 'REMOVE_TASK';
 
 
-export const addTask = (id: number, text: string, isCompleted: boolean): TaskActionTypes => ({
+export const addTask = (id: number | string, text: string, isCompleted: boolean): TaskActionTypes => ({
   type: ADD_TASK,
   payload: {
     id,
@@ -14,14 +14,14 @@ export const addTask = (id: number, text: string, isCompleted: boolean): TaskAct
   },
 });
 
-export const removeTask = (id: number): TaskActionTypes => ({
+export const removeTask = (id: number | string): TaskActionTypes => ({
   type: REMOVE_TASK,
   payload: {
     id,
   },
 });
 
-export const completedTask = (id: number, isCompleted: boolean): TaskActionTypes => ({
+export const completedTask = (id: number | string, isCompleted: boolean): TaskActionTypes => ({
   type: COMPLETED_TASK,
   payload: {
     id,

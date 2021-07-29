@@ -50,7 +50,7 @@ export const TodoInput = () => {
   const onSaveTaskClicked = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (text) {
-      dispatch(addTask(Number(uuidv4()), text, false ));
+      dispatch(addTask(uuidv4(), text, false ));
       setText('');
     }
   };

@@ -10,7 +10,7 @@ import './todoItem.scss';
 
 interface TodoItemProps {
   todo: {
-    id: number,
+    id: number | string,
     text: string,
     isCompleted: boolean,
   }
