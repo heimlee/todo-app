@@ -8,7 +8,15 @@ import { completedTask, removeTask } from '../../actions/todoActions';
 
 import './todoItem.scss';
 
-export const TodoItem = ({ todo }) => {
+interface TodoItemProps {
+  todo: {
+    id: number | string,
+    text: string,
+    isCompleted: boolean,
+  }
+};
+
+export const TodoItem = ({ todo }: TodoItemProps) => {
   const dispatch = useDispatch();
 
   return(

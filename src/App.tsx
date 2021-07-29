@@ -4,7 +4,7 @@ import { Todo } from './containers/todo/Todo';
 
 import './App.scss';
 
-function App() {
+const App:React.FC = () => {
   return (
     <div className="App">
       <Todo />
