@@ -4,6 +4,8 @@ The App allows to display the tasks, add new tasks, mark tasks as complete, and 
 
 [Check the Demo](https://heimlee.github.io/todo-app/)
 
+### ⚙️ Use `npm start` command to run app locally
+
 - React
 - TypeScript
 - Redux
