@@ -5,6 +5,8 @@ The App allows to display the tasks, add new tasks, mark tasks as complete, and 
 [Check the Demo](https://heimlee.github.io/todo-app/)
 
 - React
+- TypeScript
 - Redux
+- redux-thunk
 - SCSS
 - Material-UI
